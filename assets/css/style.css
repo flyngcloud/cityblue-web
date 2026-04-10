@@ -518,9 +518,31 @@ h1, h2, h3, h4 {
   .g-featured { grid-column: span 2; }
 }
 
-/* Logo image */
-.logo-img {
-  height: 48px;
-  width: auto;
-  display: block;
+/* Hero slider */
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.hero-slide.active { opacity: 0.25; }
+
+/* Rotating word */
+.hero-rotating {
+  color: #00aeef;
+  display: inline-block;
+  transition: opacity 0.4s ease;
+}
+
+.hero-rotating.fade { opacity: 0; }
+
+.hero h1 { font-size: 52px; max-width: 740px; }
