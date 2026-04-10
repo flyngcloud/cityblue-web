@@ -5,22 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us — City Blue Print</title>
   <meta name="description" content="Contact City Blue Print in Wichita, KS. Call 316.265.6224 or send us a message." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/wp-content/themes/onepress/assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/wp-content/themes/onepress/assets/fontawesome-v6/css/all.min.css" />
+  <link rel="stylesheet" href="/wp-content/themes/onepress/style.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Barlow', sans-serif; color: #1a1a1a; background: #f5f5f5; }
 
-    /* NAV - matches site */
-    .site-header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid #e8e8e8; }
-    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; height: 64px; display: flex; align-items: center; gap: 40px; }
-    .logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; color: #00aeef; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; }
-    .logo span { color: #1a1a1a; }
-    .nav-links { display: flex; gap: 32px; list-style: none; margin-left: auto; }
-    .nav-links a { text-decoration: none; color: #444; font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; }
-    .nav-links a:hover { color: #00aeef; }
-    .btn-nav { background: #00aeef; color: #fff; padding: 9px 20px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; }
+    /* Nav uses site WordPress theme CSS */
 
     /* Page header */
     .page-hero { background: #1a4a7a; padding: 48px 40px; }
@@ -85,18 +77,32 @@
 </head>
 <body>
 
-  <header class="site-header">
-    <nav class="nav-inner">
-      <a href="/" class="logo">City Blue <span>Print</span></a>
-      <ul class="nav-links">
-        <li><a href="/services/">Services</a></li>
-        <li><a href="/work/">Work</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/contact/">Contact</a></li>
-      </ul>
-      <a href="https://portal.cityblue.com" class="btn-nav">Portal</a>
-    </nav>
-  </header>
+  <div id="page" class="hfeed site">
+    <header id="masthead" class="site-header h-on-top" role="banner">
+      <div class="header-main">
+        <div class="site-brand-inner has-logo-img no-desc">
+          <div class="site-logo-div">
+            <a href="/" class="custom-logo-link no-t-logo" rel="home">
+              <img width="250" height="82" src="/wp-content/uploads/2019/08/City-Blue-Print-Logo-3.png" class="custom-logo" alt="City Blue Print" />
+            </a>
+          </div>
+        </div>
+        <div class="header-nav">
+          <a href="/" id="nav-toggle">Menu<span></span></a>
+          <nav id="site-navigation" class="main-navigation" role="navigation">
+            <ul class="onepress-menu">
+              <li class="menu-item"><a href="/">Home</a></li>
+              <li class="menu-item"><a href="/print/">Print</a></li>
+              <li class="menu-item"><a href="/design-branding/">Design</a></li>
+              <li class="menu-item"><a href="/supplies/">Supply</a></li>
+              <li class="menu-item"><a href="/guides/">Guides</a></li>
+              <li class="menu-item"><a href="/pay/">Pay Bill</a></li>
+              <li class="menu-item"><a href="https://portal.cityblue.com/order">Upload &amp; Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
 
   <div class="page-hero">
     <div class="page-hero-inner">
@@ -167,7 +173,7 @@
         </div>
         <div class="detail-text">
           <div class="detail-label">Email</div>
-          <a href="mailto:sales@cityblue.com">sales@cityblue.com</a>
+          <a href="/cdn-cgi/l/email-protection#9be8faf7fee8dbf8f2efe2f9f7eefeb5f8f4f6"><span class="__cf_email__" data-cfemail="cfbcaea3aabc8faca6bbb6ada3baaae1aca0a2">[email&#160;protected]</span></a>
         </div>
       </div>
 
@@ -210,7 +216,7 @@
     </div>
   </footer>
 
-  <script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     document.getElementById('contact-form').addEventListener('submit', async function(e) {
       e.preventDefault();
       const btn = document.getElementById('submit-btn');
@@ -236,13 +242,4 @@
           notice.textContent = data.error || 'Something went wrong. Please call us at 316.265.6224.';
         }
       } catch(err) {
-        notice.className = 'form-notice error';
-        notice.textContent = 'Could not send message. Please call us at 316.265.6224.';
-      }
-      btn.disabled = false;
-      btn.textContent = 'Send Message';
-    });
-  </script>
-
-</body>
-</html>
+        
