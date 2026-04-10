@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — City Blue Print</title>
+  <meta name="description" content="Contact City Blue Print in Wichita, KS. Call 316.265.6224 or send us a message." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Barlow', sans-serif; color: #1a1a1a; background: #f5f5f5; }
+
+    /* NAV - matches site */
+    .site-header { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid #e8e8e8; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 40px; height: 64px; display: flex; align-items: center; gap: 40px; }
+    .logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 22px; color: #00aeef; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; }
+    .logo span { color: #1a1a1a; }
+    .nav-links { display: flex; gap: 32px; list-style: none; margin-left: auto; }
+    .nav-links a { text-decoration: none; color: #444; font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; }
+    .nav-links a:hover { color: #00aeef; }
+    .btn-nav { background: #00aeef; color: #fff; padding: 9px 20px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; }
+
+    /* Page header */
+    .page-hero { background: #1a4a7a; padding: 48px 40px; }
+    .page-hero-inner { max-width: 1100px; margin: 0 auto; }
+    .page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: 52px; font-weight: 800; text-transform: uppercase; color: #fff; line-height: 1; }
+    .page-hero p { font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.7); margin-top: 8px; }
+
+    /* Content */
+    .page-content { max-width: 1100px; margin: 0 auto; padding: 56px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+    @media (max-width: 768px) { .page-content { grid-template-columns: 1fr; padding: 32px 24px; gap: 40px; } }
+
+    /* Form side */
+    .contact-form-wrap h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 32px; font-weight: 800; text-transform: uppercase; color: #1a1a1a; margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #666; margin-bottom: 5px; }
+    .form-group input, .form-group textarea {
+      width: 100%; padding: 10px 14px; border: 1px solid #dde2ea; border-radius: 4px;
+      font-family: 'Barlow', sans-serif; font-size: 15px; color: #1a1a1a;
+      background: #fff; transition: border-color 0.15s;
+    }
+    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #00aeef; }
+    .form-group textarea { min-height: 120px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+    .btn-submit { width: 100%; padding: 14px; background: #00aeef; color: #fff; border: none; border-radius: 4px; font-family: 'Barlow', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: background 0.2s; }
+    .btn-submit:hover { background: #0099d4; }
+    .btn-submit:disabled { background: #94a3b8; cursor: not-allowed; }
+    .form-notice { margin-top: 16px; padding: 14px 16px; border-radius: 4px; font-size: 14px; display: none; }
+    .form-notice.success { background: #d4edda; color: #155724; border: 1px solid #c3e6cb; display: block; }
+    .form-notice.error { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; display: block; }
+
+    .portal-cta { margin-top: 28px; padding: 18px 20px; background: #f0f7ff; border: 1px solid #b8d4f0; border-radius: 6px; }
+    .portal-cta p { font-size: 14px; color: #444; line-height: 1.6; }
+    .portal-cta a { color: #00aeef; font-weight: 600; text-decoration: none; }
+    .portal-cta a:hover { text-decoration: underline; }
+
+    /* Info side */
+    .contact-info h2 { font-family: 'Barlow Condensed', sans-serif; font-size: 32px; font-weight: 800; text-transform: uppercase; color: #1a1a1a; margin-bottom: 24px; }
+    .contact-detail { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+    .contact-detail .icon { width: 36px; height: 36px; background: #00aeef; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-detail .icon svg { width: 16px; height: 16px; fill: #fff; }
+    .contact-detail .detail-text { font-size: 15px; color: #1a1a1a; line-height: 1.5; }
+    .contact-detail .detail-text a { color: #00aeef; text-decoration: none; }
+    .contact-detail .detail-text a:hover { text-decoration: underline; }
+    .contact-detail .detail-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #666; margin-bottom: 2px; }
+    .map-wrap { margin-top: 24px; border-radius: 6px; overflow: hidden; border: 1px solid #dde2ea; }
+    .map-wrap iframe { width: 100%; height: 300px; display: block; border: none; }
+    .hours-block { margin-top: 20px; padding: 16px 20px; background: #fff; border: 1px solid #dde2ea; border-radius: 6px; }
+    .hours-block h4 { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #666; margin-bottom: 10px; }
+    .hours-row { display: flex; justify-content: space-between; font-size: 14px; color: #1a1a1a; padding: 3px 0; }
+    .hours-row:not(:last-child) { border-bottom: 1px solid #f0f0f0; padding-bottom: 5px; margin-bottom: 5px; }
+
+    /* Footer */
+    .site-footer { background: #111; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-logo { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 16px; color: #00aeef; letter-spacing: 1px; text-transform: uppercase; }
+    .footer-inner p { font-size: 11px; color: rgba(255,255,255,0.3); }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a { font-size: 11px; color: rgba(255,255,255,0.4); text-decoration: none; letter-spacing: 1px; text-transform: uppercase; }
+    .footer-links a:hover { color: #00aeef; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav-inner">
+      <a href="/" class="logo">City Blue <span>Print</span></a>
+      <ul class="nav-links">
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/work/">Work</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <a href="https://portal.cityblue.com" class="btn-nav">Portal</a>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you — questions, quotes, or just saying hello.</p>
+    </div>
+  </div>
+
+  <div class="page-content">
+
+    <!-- Form -->
+    <div class="contact-form-wrap">
+      <h2>Send Us a Message</h2>
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required placeholder="First Last">
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Optional">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="316.000.0000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required placeholder="Tell us what you need..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit" id="submit-btn">Send Message</button>
+        <div class="form-notice" id="form-notice"></div>
+      </form>
+
+      <div class="portal-cta">
+        <p>
+          Need to upload files or place an order?<br>
+          <a href="https://portal.cityblue.com">Visit the CityBlue Portal &rarr;</a> to submit a job, upload artwork, and track your order status.
+        </p>
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+
+      <div class="contact-detail">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        </div>
+        <div class="detail-text">
+          <div class="detail-label">Phone</div>
+          <a href="tel:3162656224">316.265.6224</a>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </div>
+        <div class="detail-text">
+          <div class="detail-label">Email</div>
+          <a href="mailto:sales@cityblue.com">sales@cityblue.com</a>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <div class="detail-text">
+          <div class="detail-label">Address</div>
+          1400 E Waterman St<br>Wichita, KS 67211
+        </div>
+      </div>
+
+      <div class="hours-block">
+        <h4>Business Hours</h4>
+        <div class="hours-row"><span>Monday – Friday</span><span>8:00 AM – 5:00 PM</span></div>
+        <div class="hours-row"><span>Saturday</span><span>Closed</span></div>
+        <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+      </div>
+
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.5!2d-97.3208!3d37.6662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87bae4a6b2f6b1f5%3A0x1!2s1400+E+Waterman+St%2C+Wichita%2C+KS+67211!5e0!3m2!1sen!2sus!4v1"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">City Blue Print</div>
+      <p>&copy; 2026 City Blue Print, Inc. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.facebook.com/cityblueprint" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/cityblueprint/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://portal.cityblue.com" target="_blank" rel="noopener">Portal</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      const notice = document.getElementById('form-notice');
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      notice.className = 'form-notice';
+      notice.textContent = '';
+
+      const fd = new FormData(this);
+      try {
+        const res = await fetch('https://portal.cityblue.com/api/contact.php', {
+          method: 'POST',
+          body: fd
+        });
+        const data = await res.json();
+        if (data.ok) {
+          notice.className = 'form-notice success';
+          notice.textContent = "Message sent! We'll be in touch soon.";
+          this.reset();
+        } else {
+          notice.className = 'form-notice error';
+          notice.textContent = data.error || 'Something went wrong. Please call us at 316.265.6224.';
+        }
+      } catch(err) {
+        notice.className = 'form-notice error';
+        notice.textContent = 'Could not send message. Please call us at 316.265.6224.';
+      }
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+    });
+  </script>
+
+</body>
+</html>
