@@ -517,3 +517,10 @@ h1, h2, h3, h4 {
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .g-featured { grid-column: span 2; }
 }
+
+/* Logo image */
+.logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
