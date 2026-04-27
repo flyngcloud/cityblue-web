@@ -1,0 +1,2 @@
+/upload/*  https://portal.cityblue.com/:splat  301
+/upload    https://portal.cityblue.com/        301
