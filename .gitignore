@@ -1,0 +1,5 @@
+# Backup files from in-place rewrites — never ship these
+*.bak
+*.bak2
+*.bak-*
+*~
