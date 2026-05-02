@@ -223,11 +223,10 @@ h1, h2, h3, h4 {
 }
 
 .hero h1 {
-  font-size: 52px;
+  font-size: 72px;
   color: #fff;
   letter-spacing: 1px;
   margin-bottom: 20px;
-  max-width: 740px;
 }
 .hero h1 span { color: #00aeef; }
 
@@ -519,35 +518,31 @@ h1, h2, h3, h4 {
   .g-featured { grid-column: span 2; }
 }
 
-/* === PHASE 1A.3 MOBILE OVERLAY MENU === */
-@media (max-width: 700px) {
-  .nav-links {
-    display: flex;
-    position: fixed;
-    inset: 0;
-    background: #fff;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    z-index: 100;
-    transform: translateY(-100%);
-    transition: transform 0.3s ease;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  body.menu-open .nav-links {
-    transform: translateY(0);
-  }
-  .nav-links a {
-    font-size: 22px;
-  }
-  .nav-toggle {
-    z-index: 101;
-    position: relative;
-  }
-  body.menu-open {
-    overflow: hidden;
-  }
+/* Hero slider */
+.hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.hero-slide.active { opacity: 0.25; }
+
+/* Rotating word */
+.hero-rotating {
+  color: #00aeef;
+  display: inline-block;
+  transition: opacity 0.4s ease;
+}
+
+.hero-rotating.fade { opacity: 0; }
+
+.hero h1 { font-size: 52px; max-width: 740px; }
