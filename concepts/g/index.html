@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concept G — City Blue Print</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#1e3a5f;color:#f4f1e8;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased;background-image:linear-gradient(rgba(244,241,232,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(244,241,232,.08) 1px,transparent 1px);background-size:40px 40px}
+a{color:inherit;text-decoration:none}
+.mono{font-family:"JetBrains Mono","Courier New",ui-monospace,monospace}
+.container{max-width:1240px;margin:0 auto;padding:0 32px;position:relative}
+header{padding:20px 0;border-bottom:1px solid rgba(244,241,232,.25)}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:"JetBrains Mono","Courier New",monospace;font-size:13px;font-weight:500;letter-spacing:1px}
+.logo .acc{color:#7dd3fc}
+nav ul{list-style:none;display:flex;gap:24px}
+nav a{font-family:"JetBrains Mono","Courier New",monospace;font-size:12px;font-weight:500;color:rgba(244,241,232,.7)}
+nav a:hover{color:#f4f1e8}
+.btn{display:inline-block;padding:10px 20px;font-family:"JetBrains Mono","Courier New",monospace;font-size:12px;font-weight:500;border:1px solid #f4f1e8;color:#f4f1e8;background:transparent}
+.btn-fill{background:#f4f1e8;color:#1e3a5f}
+.hero{padding:80px 0 100px;position:relative}
+.draft-frame{border:2px solid #f4f1e8;padding:48px;position:relative;background:rgba(30,58,95,.6)}
+.draft-frame::before,.draft-frame::after{content:"";position:absolute;width:24px;height:24px;border:2px solid #f4f1e8}
+.draft-frame::before{top:-2px;left:-2px;border-right:none;border-bottom:none}
+.draft-frame::after{bottom:-2px;right:-2px;border-left:none;border-top:none}
+.draft-corners{position:absolute;inset:0;pointer-events:none}
+.draft-corners span{position:absolute;width:24px;height:24px;border:2px solid #f4f1e8}
+.draft-corners span:nth-child(1){top:-2px;right:-2px;border-left:none;border-bottom:none}
+.draft-corners span:nth-child(2){bottom:-2px;left:-2px;border-right:none;border-top:none}
+.draft-label{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#7dd3fc;margin-bottom:24px}
+.hero h1{font-size:clamp(48px,9vw,128px);font-weight:700;line-height:.95;letter-spacing:-2px;margin-bottom:24px}
+.hero h1 .acc{color:#7dd3fc}
+.hero-note{font-family:"JetBrains Mono",monospace;font-size:13px;color:rgba(244,241,232,.75);margin-bottom:24px;line-height:1.7}
+.dimension{display:flex;align-items:center;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:2px;color:#7dd3fc;margin-top:32px}
+.dimension::before,.dimension::after{content:"├";font-size:18px}
+.dimension::after{content:"┤"}
+.dim-line{flex:1;height:1px;background:#7dd3fc;margin:0 12px;position:relative}
+.dim-line span{position:absolute;left:50%;top:-10px;transform:translateX(-50%);background:#1e3a5f;padding:0 12px;font-size:11px;letter-spacing:2px}
+.section{padding:96px 0;border-top:1px solid rgba(244,241,232,.25)}
+.section-head{margin-bottom:48px}
+.tag{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#7dd3fc;margin-bottom:12px}
+.section h2{font-size:clamp(32px,5vw,56px);font-weight:700;letter-spacing:-1px}
+.plates{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.plate{border:2px solid #f4f1e8;padding:32px;position:relative;background:rgba(30,58,95,.6)}
+.plate-corners span{position:absolute;width:16px;height:16px;border:2px solid #f4f1e8}
+.plate-corners span:nth-child(1){top:-2px;left:-2px;border-right:none;border-bottom:none}
+.plate-corners span:nth-child(2){top:-2px;right:-2px;border-left:none;border-bottom:none}
+.plate-corners span:nth-child(3){bottom:-2px;left:-2px;border-right:none;border-top:none}
+.plate-corners span:nth-child(4){bottom:-2px;right:-2px;border-left:none;border-top:none}
+.plate-id{font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:2px;color:#7dd3fc;margin-bottom:8px}
+.plate h3{font-size:32px;font-weight:700;letter-spacing:-1px;margin-bottom:12px}
+.plate p{font-size:14px;color:rgba(244,241,232,.85);line-height:1.55;margin-bottom:24px}
+.plate a{font-family:"JetBrains Mono",monospace;font-size:12px;color:#7dd3fc;border-bottom:1px solid #7dd3fc;padding-bottom:2px}
+.specs-row{display:flex;justify-content:space-between;font-family:"JetBrains Mono",monospace;font-size:11px;color:rgba(244,241,232,.6);margin-top:24px;padding-top:16px;border-top:1px dashed rgba(244,241,232,.3)}
+.cta{padding:80px 0;border-top:1px solid rgba(244,241,232,.25);text-align:center}
+.cta h2{font-size:clamp(36px,5vw,56px);font-weight:700;letter-spacing:-1px;margin-bottom:16px}
+.cta p{font-family:"JetBrains Mono",monospace;font-size:14px;color:rgba(244,241,232,.75);margin-bottom:24px}
+footer{padding:32px 0;border-top:1px solid rgba(244,241,232,.25);font-family:"JetBrains Mono",monospace;font-size:11px;color:rgba(244,241,232,.6)}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.foot a{margin-left:14px}
+.foot a:hover{color:#7dd3fc}
+@media (max-width:768px){.plates{grid-template-columns:1fr}nav ul{display:none}.draft-frame{padding:24px}.foot{flex-direction:column;align-items:flex-start}.foot a{margin:0 14px 0 0}}
+</style>
+</head>
+<body>
+<header><div class="container nav-inner">
+  <a href="/" class="logo">CBP<span class="acc">::</span>print_design_supply</a>
+  <nav><ul>
+    <li><a href="/print/">/print</a></li><li><a href="/design-branding/">/design</a></li><li><a href="/supplies/">/supply</a></li><li><a href="/contact/">/contact</a></li>
+  </ul></nav>
+  <a href="https://portal.cityblue.com" class="btn">portal →</a>
+</div></header>
+<section class="hero"><div class="container">
+  <div class="draft-frame">
+    <div class="draft-corners"><span></span><span></span></div>
+    <div class="draft-label">DRAWING-001 · CITY BLUE PRINT · WICHITA, KS</div>
+    <h1>Print<br>Design<br><span class="acc">Supply</span></h1>
+    <div class="hero-note">// EST. 1932 ←———— a Wichita print shop, three departments, one building.<br>// 1400 E Waterman / 316.265.6224 / sales@cityblue.com</div>
+    <div class="dimension"><div class="dim-line"><span>1932 ↔ 2026 · 94 yrs</span></div></div>
+  </div>
+</div></section>
+<section class="section"><div class="container">
+  <div class="section-head"><div class="tag">// PLATES — 3 OF 3</div><h2>Three departments.</h2></div>
+  <div class="plates">
+    <div class="plate"><div class="plate-corners"><span></span><span></span><span></span><span></span></div><div class="plate-id">PLATE 01 / PRINT</div><h3>Print</h3><p>Business cards to billboards. Banners, blueprints, posters, books, and everything between.</p><a href="/print/">→ open_print</a><div class="specs-row"><span>SHEET 01</span><span>SCALE 1:1</span></div></div>
+    <div class="plate"><div class="plate-corners"><span></span><span></span><span></span><span></span></div><div class="plate-id">PLATE 02 / DESIGN</div><h3>Design</h3><p>Logos, branding, layout. We design what we print, or print what you design.</p><a href="/design-branding/">→ open_design</a><div class="specs-row"><span>SHEET 02</span><span>SCALE 1:1</span></div></div>
+    <div class="plate"><div class="plate-corners"><span></span><span></span><span></span><span></span></div><div class="plate-id">PLATE 03 / SUPPLY</div><h3>Supply</h3><p>Paper stock, art supplies, surveying equipment, fulfillment, and shipping.</p><a href="/supplies/">→ open_supply</a><div class="specs-row"><span>SHEET 03</span><span>SCALE 1:1</span></div></div>
+  </div>
+</div></section>
+<section class="cta"><div class="container">
+  <h2>Need a quote?</h2>
+  <p>// call 316.265.6224 // email sales@cityblue.com</p>
+  <a href="https://portal.cityblue.com" class="btn btn-fill">→ open_portal</a>
+</div></section>
+<footer><div class="container foot">
+  <div>// © 2026 CITY_BLUE_PRINT_INC // WICHITA_KS // 1932-2026</div>
+  <div><a href="/">← /home</a><a href="/concepts/a/">/a</a><a href="/concepts/b/">/b</a><a href="/concepts/c/">/c</a><a href="/concepts/d/">/d</a><a href="/concepts/e/">/e</a><a href="/concepts/f/">/f</a><a href="/concepts/h/">/h</a><a href="/concepts/i/">/i</a></div>
+</div></footer>
+</body>
+</html>

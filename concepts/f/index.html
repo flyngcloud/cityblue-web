@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concept F — City Blue Print</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#fafafa;color:#0a0a0a;font-family:"Helvetica Neue","Arial Black",Arial,Helvetica,sans-serif;line-height:1.4;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.container{max-width:1280px;margin:0 auto;padding:0 32px}
+header{padding:24px 0;border-bottom:6px solid #0a0a0a}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:18px;font-weight:900;letter-spacing:-.5px;text-transform:uppercase}
+.logo span{background:#00aeef;color:#fff;padding:2px 6px;margin:0 2px}
+nav ul{list-style:none;display:flex;gap:24px}
+nav a{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px}
+.btn{display:inline-block;padding:12px 24px;background:#00aeef;color:#fff;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:13px}
+.btn-dark{background:#0a0a0a}
+.poster{position:relative;padding:80px 0 120px;overflow:hidden}
+.poster .shape-rect{position:absolute;background:#00aeef;width:55%;height:380px;left:0;top:120px;z-index:0}
+.poster .shape-circle{position:absolute;width:280px;height:280px;border-radius:50%;background:#00aeef;right:6%;top:60px;z-index:0;mix-blend-mode:multiply}
+.poster .shape-block{position:absolute;background:#0a0a0a;width:140px;height:140px;right:18%;bottom:40px;z-index:0}
+.poster-content{position:relative;z-index:2}
+.poster h1{font-size:clamp(64px,15vw,200px);font-weight:900;line-height:.85;letter-spacing:-4px;text-transform:uppercase;color:#fff;mix-blend-mode:difference}
+.poster .tag{font-size:14px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-top:32px;background:#0a0a0a;color:#fafafa;display:inline-block;padding:8px 16px}
+.est-strip{background:#0a0a0a;color:#fafafa;padding:32px 0;overflow:hidden;border-top:6px solid #00aeef;border-bottom:6px solid #00aeef}
+.est-strip .container{display:flex;align-items:baseline;gap:32px;flex-wrap:wrap}
+.est-strip .est{font-size:clamp(80px,18vw,220px);font-weight:900;letter-spacing:-6px;line-height:.85;color:#00aeef}
+.est-strip .meta{font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;line-height:1.6}
+.services{padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
+.svc{padding:64px 40px;border-right:6px solid #fafafa;background:#00aeef;color:#fff}
+.svc:last-child{border-right:none}
+.svc:nth-child(2){background:#0a0a0a}
+.svc-num{font-size:14px;font-weight:900;letter-spacing:3px;margin-bottom:16px;opacity:.8}
+.svc h2{font-size:clamp(42px,5vw,64px);font-weight:900;letter-spacing:-2px;text-transform:uppercase;line-height:.9;margin-bottom:20px}
+.svc p{font-size:16px;font-weight:500;margin-bottom:24px;line-height:1.5}
+.svc a{font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-bottom:3px solid #fff;padding-bottom:4px}
+.cta{padding:96px 0;text-align:center;background:#fafafa;border-bottom:6px solid #0a0a0a}
+.cta h2{font-size:clamp(48px,8vw,120px);font-weight:900;letter-spacing:-3px;text-transform:uppercase;line-height:.9;margin-bottom:24px}
+.cta h2 span{background:#00aeef;color:#fff;padding:0 12px}
+.cta p{font-size:18px;font-weight:700;margin-bottom:32px}
+.contact{padding:64px 0;background:#0a0a0a;color:#fafafa}
+.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.contact-item h4{font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#00aeef;margin-bottom:8px}
+.contact-item p,.contact-item a{font-size:18px;font-weight:700}
+footer{padding:32px 0;background:#0a0a0a;color:#fafafa;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border-top:1px solid #333}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.foot-nav a{margin-left:14px}
+@media (max-width:768px){.services{grid-template-columns:1fr}.svc{border-right:none;border-bottom:6px solid #fafafa}.svc:last-child{border-bottom:none}.contact-grid{grid-template-columns:1fr 1fr}.poster .shape-circle,.poster .shape-block{display:none}.poster .shape-rect{width:90%;height:60%;top:80px}nav ul{display:none}.foot{flex-direction:column;align-items:flex-start}.foot-nav a{margin:0 14px 0 0}}
+</style>
+</head>
+<body>
+<header><div class="container nav-inner">
+  <div class="logo">CITY <span>BLUE</span> PRINT</div>
+  <nav><ul>
+    <li><a href="/print/">Print</a></li><li><a href="/design-branding/">Design</a></li><li><a href="/supplies/">Supply</a></li><li><a href="/contact/">Contact</a></li>
+  </ul></nav>
+  <a href="https://portal.cityblue.com" class="btn">Portal →</a>
+</div></header>
+<section class="poster"><div class="container">
+  <div class="shape-rect"></div>
+  <div class="shape-circle"></div>
+  <div class="shape-block"></div>
+  <div class="poster-content">
+    <h1>Print.<br>Design.<br>Supply.</h1>
+    <div class="tag">— Wichita / Since 1932 —</div>
+  </div>
+</div></section>
+<section class="est-strip"><div class="container">
+  <div class="est">EST 1932</div>
+  <div class="meta">Family-owned<br>Wichita, Kansas<br>1400 E Waterman<br>316.265.6224</div>
+</div></section>
+<section class="services">
+  <div class="svc"><div class="svc-num">01</div><h2>Print</h2><p>Business cards to billboards. Banners, blueprints, posters, books, and everything between.</p><a href="/print/">Explore Print →</a></div>
+  <div class="svc"><div class="svc-num">02</div><h2>Design</h2><p>Logos, branding, layout. We design what we print, or print what you design.</p><a href="/design-branding/">Explore Design →</a></div>
+  <div class="svc"><div class="svc-num">03</div><h2>Supply</h2><p>Paper stock, art supplies, surveying equipment, fulfillment, and shipping.</p><a href="/supplies/">Explore Supply →</a></div>
+</section>
+<section class="cta"><div class="container">
+  <h2>Need a <span>Quote</span>?</h2>
+  <p>Call 316.265.6224 or email sales@cityblue.com.</p>
+  <a href="https://portal.cityblue.com" class="btn btn-dark">Open the Portal →</a>
+</div></section>
+<section class="contact"><div class="container contact-grid">
+  <div class="contact-item"><h4>Visit</h4><p>1400 E Waterman<br>Wichita, KS 67211</p></div>
+  <div class="contact-item"><h4>Call</h4><a href="tel:+13162656224">316.265.6224</a></div>
+  <div class="contact-item"><h4>Email</h4><a href="mailto:sales@cityblue.com">sales@cityblue.com</a></div>
+  <div class="contact-item"><h4>Hours</h4><p>Mon–Fri 8–5</p></div>
+</div></section>
+<footer><div class="container foot">
+  <div>© 2026 CITY BLUE PRINT, INC.</div>
+  <div class="foot-nav"><a href="/">← HOME</a><a href="/concepts/a/">A</a><a href="/concepts/b/">B</a><a href="/concepts/c/">C</a><a href="/concepts/d/">D</a><a href="/concepts/e/">E</a><a href="/concepts/g/">G</a><a href="/concepts/h/">H</a><a href="/concepts/i/">I</a></div>
+</div></footer>
+</body>
+</html>
