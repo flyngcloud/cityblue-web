@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concept B — Showcase — City Blue Print</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0e1a;--fg:#fff;--muted:rgba(255,255,255,.55);--cyan:#00aeef;--rule:rgba(255,255,255,.1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--fg);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.container{max-width:1400px;margin:0 auto;padding:0 40px}
+header{position:fixed;top:0;left:0;right:0;z-index:100;padding:24px 0;background:linear-gradient(to bottom,rgba(10,14,26,.6),transparent)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;font-size:14px;letter-spacing:3px;text-transform:uppercase;text-decoration:none}
+.logo span{color:var(--cyan)}
+nav ul{list-style:none;display:flex;gap:28px}
+nav a{font-size:13px;font-weight:500;text-decoration:none;opacity:.8}
+nav a:hover{opacity:1;color:var(--cyan)}
+.hero{height:100vh;min-height:600px;position:relative;display:flex;align-items:flex-end;padding-bottom:80px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:linear-gradient(to bottom,rgba(10,14,26,.4) 0%,rgba(10,14,26,.95) 100%),url('/assets/images/City-Blue-Print-BG-Machine.jpg');background-size:cover;background-position:center;z-index:0}
+.hero-content{position:relative;z-index:1;width:100%}
+.eyebrow{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--cyan);margin-bottom:24px}
+.hero h1{font-size:84px;font-weight:300;line-height:1;letter-spacing:-2px;margin-bottom:32px;max-width:900px}
+.hero h1 strong{font-weight:700}
+.actions{display:flex;gap:16px;align-items:center}
+.btn{display:inline-block;padding:16px 32px;font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase;text-decoration:none;background:var(--cyan);color:#0a0e1a;border:none;cursor:pointer}
+.btn-ghost{background:transparent;color:var(--fg);border:1px solid rgba(255,255,255,.3)}
+.section{padding:120px 0}
+.section-head{margin-bottom:60px}
+.section-h2{font-size:48px;font-weight:300;letter-spacing:-1px}
+.work-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:360px 360px;gap:12px}
+.tile{position:relative;overflow:hidden;background:#1a2030}
+.t1{grid-row:1/span 2;background-image:url('/assets/images/City-Blue-Print-BG-Prints.jpg');background-size:cover;background-position:center}
+.t2{background-image:url('/assets/images/service-design-640.jpg');background-size:cover;background-position:center}
+.t3{background-image:url('/assets/images/City-Blue-Print-BG-Books.jpg');background-size:cover;background-position:center}
+.t4{background-image:url('/assets/images/service-print-640.jpg');background-size:cover;background-position:center}
+.t5{background-image:url('/assets/images/service-supply-640.jpg');background-size:cover;background-position:center}
+.tile-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,14,26,.95) 0%,rgba(10,14,26,0) 50%);display:flex;align-items:flex-end;padding:24px}
+.tile-label{font-size:11px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:var(--cyan)}
+.tile-title{font-size:20px;font-weight:400;margin-top:4px}
+.svc-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.svc{background:var(--bg);padding:60px 40px}
+.svc-label{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:16px}
+.svc h3{font-size:32px;font-weight:300;margin-bottom:16px}
+.svc p{font-size:15px;color:var(--muted);margin-bottom:24px}
+.svc a{font-size:13px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;color:var(--cyan)}
+.cta{padding:100px 0;text-align:center;border-top:1px solid var(--rule)}
+.cta h2{font-size:56px;font-weight:300;letter-spacing:-1px;margin-bottom:24px}
+.cta p{color:var(--muted);margin-bottom:32px;font-size:16px}
+footer{border-top:1px solid var(--rule);padding:40px 0;font-size:12px;color:var(--muted)}
+footer .container{display:flex;justify-content:space-between;align-items:center}
+footer a{text-decoration:none;margin-left:24px}
+@media (max-width:800px){.hero h1{font-size:42px}.work-grid{grid-template-columns:1fr;grid-template-rows:repeat(5,240px)}.t1{grid-row:auto}.svc-row{grid-template-columns:1fr}.section-h2{font-size:32px}nav ul{display:none}}
+</style>
+</head>
+<body>
+<header><div class="container nav-inner">
+  <a href="/" class="logo">City <span>Blue</span> Print</a>
+  <nav><ul>
+    <li><a href="/print/">Print</a></li><li><a href="/design-branding/">Design</a></li><li><a href="/supplies/">Supply</a></li><li><a href="/contact/">Contact</a></li><li><a href="https://portal.cityblue.com">Portal →</a></li>
+  </ul></nav>
+</div></header>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content"><div class="container">
+    <div class="eyebrow">Wichita / Since 1932</div>
+    <h1>Print, design, <strong>supply</strong>.<br>Under one roof.</h1>
+    <div class="actions">
+      <a href="https://portal.cityblue.com" class="btn">Start a Job</a>
+      <a href="/contact/" class="btn btn-ghost">Get a Quote</a>
+    </div>
+  </div></div>
+</section>
+<section class="section"><div class="container">
+  <div class="section-head"><div class="eyebrow">Recent Work</div><div class="section-h2">A century of Wichita print.</div></div>
+  <div class="work-grid">
+    <div class="tile t1"><div class="tile-overlay"><div><div class="tile-label">Featured</div><div class="tile-title">Banner & Signage</div></div></div></div>
+    <div class="tile t2"><div class="tile-overlay"><div><div class="tile-label">Design</div><div class="tile-title">Brand Identity</div></div></div></div>
+    <div class="tile t3"><div class="tile-overlay"><div><div class="tile-label">Print</div><div class="tile-title">Books & Binding</div></div></div></div>
+    <div class="tile t4"><div class="tile-overlay"><div><div class="tile-label">Print</div><div class="tile-title">Large Format</div></div></div></div>
+    <div class="tile t5"><div class="tile-overlay"><div><div class="tile-label">Supply</div><div class="tile-title">Fulfillment</div></div></div></div>
+  </div>
+</div></section>
+<section class="svc-row">
+  <div class="svc"><div class="svc-label">01 / Print</div><h3>Anything that's printed.</h3><p>Business cards to billboards. Banners, blueprints, books.</p><a href="/print/">View services →</a></div>
+  <div class="svc"><div class="svc-label">02 / Design</div><h3>Design that prints.</h3><p>Logos, branding, layout. Files prepped for production.</p><a href="/design-branding/">View services →</a></div>
+  <div class="svc"><div class="svc-label">03 / Supply</div><h3>Paper, gear, fulfillment.</h3><p>Stock, art supplies, surveying equipment, shipping.</p><a href="/supplies/">View services →</a></div>
+</section>
+<section class="cta"><div class="container">
+  <h2>Ready to start?</h2>
+  <p>Call 316.265.6224 or visit us at 1400 E Waterman, Wichita, KS.</p>
+  <a href="https://portal.cityblue.com" class="btn">Start a Job</a>
+</div></section>
+<footer><div class="container">
+  <div>© 2026 City Blue Print, Inc. / Wichita / Since 1932</div>
+  <div><a href="/">← Home</a><a href="/concepts/a/">Concept A</a><a href="/concepts/c/">Concept C</a></div>
+</div></footer>
+</body>
+</html>

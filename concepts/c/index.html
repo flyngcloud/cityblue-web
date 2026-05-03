@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concept C — Dashboard — City Blue Print</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d1421;--bg-card:#131c2e;--bg-card-hover:#1a2540;--fg:#e8eef7;--muted:#7a8aa3;--cyan:#00aeef;--rule:rgba(255,255,255,.06)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--fg);line-height:1.5;font-size:14px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.mono{font-family:'JetBrains Mono',monospace}
+.container{max-width:1240px;margin:0 auto;padding:0 32px}
+.top-bar{background:var(--cyan);height:3px}
+header{border-bottom:1px solid var(--rule);padding:20px 0;position:sticky;top:0;background:rgba(13,20,33,.95);backdrop-filter:blur(8px);z-index:100}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'JetBrains Mono',monospace;font-weight:500;font-size:13px;text-decoration:none;color:var(--fg)}
+.logo .accent{color:var(--cyan)}
+nav ul{list-style:none;display:flex;gap:24px}
+nav a{font-size:13px;font-weight:500;text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--fg)}
+.btn{display:inline-block;padding:8px 16px;font-size:12px;font-weight:500;text-decoration:none;background:var(--cyan);color:var(--bg);border-radius:4px}
+.btn-lg{padding:12px 24px;font-size:13px}
+.btn-ghost{background:transparent;color:var(--fg);border:1px solid var(--rule)}
+.hero{padding:80px 0 60px;border-bottom:1px solid var(--rule)}
+.hero-status{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);margin-bottom:32px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 12px var(--cyan)}
+.hero h1{font-size:56px;font-weight:700;line-height:1.05;letter-spacing:-1.5px;margin-bottom:16px;max-width:800px}
+.hero h1 .hl{color:var(--cyan)}
+.hero p{font-size:17px;color:var(--muted);max-width:600px;margin-bottom:32px}
+.actions{display:flex;gap:12px;margin-bottom:40px}
+.hero-meta{display:flex;gap:32px;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)}
+.hero-meta-item strong{color:var(--fg);font-weight:500}
+.section{padding:80px 0;border-bottom:1px solid var(--rule)}
+.section-head{margin-bottom:40px}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);background:rgba(0,174,239,.1);border:1px solid rgba(0,174,239,.2);padding:4px 10px;border-radius:3px;margin-bottom:16px}
+.section h2{font-size:32px;font-weight:600;letter-spacing:-.5px;margin-bottom:8px}
+.section-sub{color:var(--muted);font-size:16px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--bg-card);border:1px solid var(--rule);padding:28px;border-radius:8px;transition:background .15s,border-color .15s}
+.card:hover{background:var(--bg-card-hover);border-color:rgba(0,174,239,.3)}
+.card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.card-id{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)}
+.pill{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--cyan);background:rgba(0,174,239,.1);padding:2px 8px;border-radius:3px}
+.card h3{font-size:20px;font-weight:600;margin-bottom:8px}
+.card p{color:var(--muted);font-size:14px;margin-bottom:20px;line-height:1.55}
+.card-foot{border-top:1px solid var(--rule);padding-top:16px;display:flex;justify-content:space-between;align-items:center}
+.card-link{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--cyan);text-decoration:none}
+.card-meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.fact{background:var(--bg-card);border:1px solid var(--rule);padding:24px;border-radius:8px}
+.fact-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.fact-value{font-size:28px;font-weight:600}
+.fact-value .accent{color:var(--cyan)}
+.fact-meta{font-size:12px;color:var(--muted);margin-top:4px}
+.cta{padding:80px 0;text-align:center;border-bottom:1px solid var(--rule)}
+.cta h2{font-size:36px;font-weight:600;margin-bottom:16px}
+.cta p{color:var(--muted);margin-bottom:24px}
+footer{padding:40px 0;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted)}
+.foot-inner{display:flex;justify-content:space-between}
+.foot-inner a{color:var(--muted);text-decoration:none;margin-left:20px}
+.foot-inner a:hover{color:var(--cyan)}
+@media (max-width:800px){.hero h1{font-size:36px}.cards,.facts{grid-template-columns:1fr}nav ul{display:none}.hero-meta{flex-direction:column;gap:8px}}
+</style>
+</head>
+<body>
+<div class="top-bar"></div>
+<header><div class="container nav-inner">
+  <a href="/" class="logo">city_blue_print<span class="accent">.com</span></a>
+  <nav><ul>
+    <li><a href="/print/">Print</a></li><li><a href="/design-branding/">Design</a></li><li><a href="/supplies/">Supply</a></li><li><a href="/guides/">Guides</a></li><li><a href="/contact/">Contact</a></li>
+  </ul></nav>
+  <a href="https://portal.cityblue.com" class="btn">Portal →</a>
+</div></header>
+<section class="hero"><div class="container">
+  <div class="hero-status"><span class="dot"></span><span>OPEN — MON-FRI 8:00 to 17:00 CST</span></div>
+  <h1>Wichita's print shop, <span class="hl">since 1932</span>.</h1>
+  <p>Local print, design, and fulfillment. Powered by an in-house job portal that tracks every project from quote to delivery.</p>
+  <div class="actions">
+    <a href="https://portal.cityblue.com" class="btn btn-lg">Start a Job →</a>
+    <a href="/contact/" class="btn btn-lg btn-ghost">Get a Quote</a>
+  </div>
+  <div class="hero-meta">
+    <div class="hero-meta-item">📍 <strong>1400 E Waterman, Wichita KS</strong></div>
+    <div class="hero-meta-item">📞 <strong>316.265.6224</strong></div>
+    <div class="hero-meta-item">✉ <strong>sales@cityblue.com</strong></div>
+  </div>
+</div></section>
+<section class="section"><div class="container">
+  <div class="section-head"><div class="tag">// services</div><h2>Three things, done right.</h2><div class="section-sub">Each one's a full department. Each one's been at it for decades.</div></div>
+  <div class="cards">
+    <div class="card"><div class="card-head"><div class="card-id">SVC_01</div><div class="pill">PRINT</div></div><h3>Print</h3><p>Business cards to billboards. Banners, blueprints, posters, books, and everything between.</p><div class="card-foot"><a href="/print/" class="card-link">→ explore_print</a><div class="card-meta">9 categories</div></div></div>
+    <div class="card"><div class="card-head"><div class="card-id">SVC_02</div><div class="pill">DESIGN</div></div><h3>Design</h3><p>Logos, branding, layout. We design what we print, or print what you design.</p><div class="card-foot"><a href="/design-branding/" class="card-link">→ explore_design</a><div class="card-meta">In-house</div></div></div>
+    <div class="card"><div class="card-head"><div class="card-id">SVC_03</div><div class="pill">SUPPLY</div></div><h3>Supply</h3><p>Paper stock, art supplies, surveying equipment, fulfillment, shipping.</p><div class="card-foot"><a href="/supplies/" class="card-link">→ explore_supply</a><div class="card-meta">5 categories</div></div></div>
+  </div>
+</div></section>
+<section class="section"><div class="container">
+  <div class="section-head"><div class="tag">// facts</div><h2>The numbers.</h2></div>
+  <div class="facts">
+    <div class="fact"><div class="fact-label">Founded</div><div class="fact-value"><span class="accent">1932</span></div><div class="fact-meta">Wichita, KS</div></div>
+    <div class="fact"><div class="fact-label">Service Area</div><div class="fact-value">KS<span class="accent">+</span>WW</div><div class="fact-meta">Local + worldwide</div></div>
+    <div class="fact"><div class="fact-label">Hours</div><div class="fact-value">M–F</div><div class="fact-meta">8:00 to 17:00</div></div>
+    <div class="fact"><div class="fact-label">Portal</div><div class="fact-value"><span class="accent">v2</span>.0</div><div class="fact-meta">Live job tracking</div></div>
+  </div>
+</div></section>
+<section class="cta"><div class="container">
+  <h2>Ready to start a job?</h2>
+  <p>The portal handles quotes, proofs, files, and approvals — all in one place.</p>
+  <a href="https://portal.cityblue.com" class="btn btn-lg">Open Portal →</a>
+</div></section>
+<footer><div class="container foot-inner">
+  <div>© 2026 city_blue_print.com / wichita / since 1932</div>
+  <div><a href="/">← home</a><a href="/concepts/a/">concept_a</a><a href="/concepts/b/">concept_b</a></div>
+</div></footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concept A — Print as Craft — City Blue Print</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root { --paper:#faf6ed; --ink:#1a1815; --cyan:#00aeef; --rule:#d4ccba; }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Crimson Pro',Georgia,serif;background:var(--paper);color:var(--ink);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.cmyk{display:flex;height:6px}
+.cmyk>div{flex:1}
+.cmyk-c{background:#00aeef}.cmyk-m{background:#ec008c}.cmyk-y{background:#fff200}.cmyk-k{background:#1a1815}
+.container{max-width:1200px;margin:0 auto;padding:0 40px}
+header{border-bottom:1px solid var(--rule);padding:24px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:22px;letter-spacing:2px;text-decoration:none;color:var(--ink)}
+.logo span{color:var(--cyan)}
+nav ul{list-style:none;display:flex;gap:32px}
+nav a{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.hero{padding:120px 0 100px;position:relative;background-image:radial-gradient(circle at 1px 1px,rgba(26,24,21,0.06) 1px,transparent 0);background-size:14px 14px}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--cyan);margin-bottom:24px}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:168px;line-height:.85;letter-spacing:-2px;text-transform:uppercase;margin-bottom:40px}
+.hero h1 span{color:var(--cyan);display:block}
+.hero-meta{display:flex;gap:60px;align-items:flex-end;border-top:2px solid var(--ink);padding-top:24px;max-width:700px}
+.hero-meta-item{font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase}
+.hero-meta-item strong{display:block;font-size:24px;margin-bottom:4px}
+.stamp{position:absolute;right:40px;top:50%;transform:translateY(-50%) rotate(-8deg);width:180px;height:180px;border:3px solid var(--cyan);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:'Barlow Condensed',sans-serif;text-align:center;color:var(--cyan)}
+.stamp .est{font-size:12px;letter-spacing:4px}
+.stamp .year{font-size:56px;font-weight:900;line-height:1;margin:4px 0}
+.stamp .place{font-size:11px;letter-spacing:3px}
+.services{padding:100px 0;border-top:2px solid var(--ink)}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:60px}
+.svc-num{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;letter-spacing:2px;color:var(--cyan);margin-bottom:16px}
+.svc h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:48px;text-transform:uppercase;margin-bottom:16px;line-height:1}
+.svc p{font-size:18px;margin-bottom:24px}
+.svc a{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--cyan);padding-bottom:4px}
+.heritage{padding:100px 0;background:var(--ink);color:var(--paper)}
+.heritage-grid{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start}
+.heritage h2{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:14px;letter-spacing:4px;text-transform:uppercase;color:var(--cyan)}
+.heritage p{font-size:24px;line-height:1.4}
+.heritage p em{color:var(--cyan);font-style:normal;font-weight:600}
+.contact{padding:60px 0;border-top:2px solid var(--ink)}
+.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+.contact-item h3{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+.contact-item p{font-size:16px}
+.contact-item a{color:var(--ink);text-decoration:none}
+footer{padding:40px 0;border-top:1px solid var(--rule);font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+.footer-inner{display:flex;justify-content:space-between}
+.footer-inner a{color:var(--ink);text-decoration:none;margin-left:24px}
+@media (max-width:800px){.hero h1{font-size:64px}.stamp{display:none}.svc-grid,.heritage-grid,.contact-grid{grid-template-columns:1fr;gap:40px}nav ul{gap:16px}nav a{font-size:11px}}
+</style>
+</head>
+<body>
+<div class="cmyk"><div class="cmyk-c"></div><div class="cmyk-m"></div><div class="cmyk-y"></div><div class="cmyk-k"></div></div>
+<header><div class="container nav-inner">
+  <a href="/" class="logo">CITY <span>BLUE</span> PRINT</a>
+  <nav><ul>
+    <li><a href="/print/">Print</a></li><li><a href="/design-branding/">Design</a></li><li><a href="/supplies/">Supply</a></li><li><a href="/guides/">Guides</a></li><li><a href="/contact/">Contact</a></li><li><a href="https://portal.cityblue.com">Portal</a></li>
+  </ul></nav>
+</div></header>
+<section class="hero"><div class="container">
+  <div class="eyebrow">CITY BLUE PRINT, INC. — WICHITA, KANSAS</div>
+  <h1>Print<br><span>Design</span><br>Supply</h1>
+  <div class="hero-meta">
+    <div class="hero-meta-item"><strong>1400</strong>E Waterman</div>
+    <div class="hero-meta-item"><strong>316</strong>265.6224</div>
+    <div class="hero-meta-item"><strong>M–F</strong>8 to 5</div>
+  </div>
+  <div class="stamp"><div class="est">EST.</div><div class="year">1932</div><div class="place">WICHITA</div></div>
+</div></section>
+<section class="services"><div class="container svc-grid">
+  <div class="svc"><div class="svc-num">№ 01</div><h2>Print</h2><p>Business cards to billboards. Banners, blueprints, posters, books, and everything between.</p><a href="/print/">Explore →</a></div>
+  <div class="svc"><div class="svc-num">№ 02</div><h2>Design</h2><p>Logos, branding, layout. We design what we print, or print what you design.</p><a href="/design-branding/">Explore →</a></div>
+  <div class="svc"><div class="svc-num">№ 03</div><h2>Supply</h2><p>Paper stock, art supplies, surveying equipment, fulfillment, and shipping.</p><a href="/supplies/">Explore →</a></div>
+</div></section>
+<section class="heritage"><div class="container heritage-grid">
+  <h2>Since 1932</h2>
+  <p>For <em>nearly a century</em>, we've been Wichita's print shop. Locally rooted, family owned, shipping worldwide.</p>
+</div></section>
+<section class="contact"><div class="container contact-grid">
+  <div class="contact-item"><h3>Visit</h3><p>1400 E Waterman<br>Wichita, KS 67211</p></div>
+  <div class="contact-item"><h3>Call</h3><p><a href="tel:+13162656224">316.265.6224</a></p></div>
+  <div class="contact-item"><h3>Email</h3><p><a href="mailto:sales@cityblue.com">sales@cityblue.com</a></p></div>
+  <div class="contact-item"><h3>Hours</h3><p>Mon–Fri 8–5</p></div>
+</div></section>
+<footer><div class="container footer-inner">
+  <div>© 2026 City Blue Print, Inc.</div>
+  <div><a href="/">← Back to homepage</a><a href="/concepts/b/">Concept B</a><a href="/concepts/c/">Concept C</a></div>
+</div></footer>
+</body>
+</html>
